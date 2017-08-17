@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("TS")]
 [assembly: AssemblyProduct("FortranCodeNav")]
-[assembly: AssemblyCopyright("Copyright © 2012-2015")]
+[assembly: AssemblyCopyright("Copyright © 2012-2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

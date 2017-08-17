@@ -48,7 +48,7 @@ Pattern search is a method to quickly filter the results without typing out the 
 
 So the search term 'HL' would match 'hello' whereas the search term 'hl' would not. Expressed as a (case insensitive) wildcard pattern:
 - hl = 'hl'
-- HL = 'h*l*'
+- HL = 'h\*l\*'
 
 The pattern search is useful to quickly find members by their acronym:
 - Fortran = FTRN
