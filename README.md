@@ -1,4 +1,11 @@
+## Fortran CodeNav
+
 ### Installation
+
+The latest stable release can be found in the Visual Studio marketplace here:
+https://marketplace.visualstudio.com/items?itemName=TiemenSchreuder.FortranCodeNav
+
+### Build
 
 The latest stable release can be found in the Visual Studio marketplace here:
 https://marketplace.visualstudio.com/items?itemName=TiemenSchreuder.FortranCodeNav
@@ -45,12 +52,12 @@ Should you wish to change the shortcut keys used by Fortran CodeNav, you can do 
 Pattern search is a method to quickly filter the results without typing out the entire search term. In the pattern search all uppercase letters are considered to be followed by any number of other letters while all lowercase letters must be an exact match.
 
 So the search term 'HL' would match 'hello' whereas the search term 'hl' would not. Expressed as a (case insensitive) wildcard pattern:
-hl = 'hl'
-HL = 'h*l*'
+- hl = 'hl'
+- HL = 'h*l*'
 
 The pattern search is useful to quickly find members by their acronym:
-Fortran = FTRN
-boundaryconditions = BouCon
-wave_to_flow_status = WToFS
+- Fortran = FTRN
+- boundaryconditions = BouCon
+- wave_to_flow_status = WToFS
 
 Note for ReSharper users: unlike ReSharper, Fortran CodeNav does not take the casing of the member names into account.
