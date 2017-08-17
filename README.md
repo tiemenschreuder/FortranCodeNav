@@ -5,11 +5,6 @@
 The latest stable release can be found in the Visual Studio marketplace here:
 https://marketplace.visualstudio.com/items?itemName=TiemenSchreuder.FortranCodeNav
 
-### Build
-
-The latest stable release can be found in the Visual Studio marketplace here:
-https://marketplace.visualstudio.com/items?itemName=TiemenSchreuder.FortranCodeNav
-
 ### About
 
 Fortran CodeNav is a Visual Studio Extension which helps you to navigate through Fortran 90 code (and other versions). It contains several parsers to generate a code structure representation which is used to provide jump-to and search functionality with limited context-awareness. Additionally it provides scope-aware code completion (Intellisense). 
