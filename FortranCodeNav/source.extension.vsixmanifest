@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="FortranCodeNav.TS.55948bba-b407-4af9-99d4-eb4fb3cf1eec" Version="1.3" Language="en-US" Publisher="Tiemen Schreuder" />
+    <DisplayName>Fortran CodeNav</DisplayName>
+    <Description xml:space="preserve">Fortran CodeNav helps you to easily jump and search through Fortran 90 code and also provides code completion (IntelliSense).</Description>
+    <MoreInfo>https://www.youtube.com/watch?v=ApumbtDAqMM</MoreInfo>
+    <Icon>fortran_codenav_32_nobg.png</Icon>
+    <PreviewImage>fortran_codenav_200_nobg.png</PreviewImage>
+    <Tags>Fortran; code completion; Intellisense; f90; f77; f70</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Version="[11.0,17.0]" Id="Microsoft.VisualStudio.Pro" />
+    <InstallationTarget Version="[11.0,17.0]" Id="Microsoft.VisualStudio.Ultimate" />
+    <InstallationTarget Version="[11.0,17.0]" Id="Microsoft.VisualStudio.Premium" />
+    <InstallationTarget Version="[11.0,17.0]" Id="Microsoft.VisualStudio.Community" />
+    <!--<InstallationTarget Version="[11.0,15.0)" Id="Microsoft.VisualStudio.VSWinExpress" />-->
+    <!--<InstallationTarget Version="[11.0,15.0)" Id="Microsoft.VisualStudio.VSWinDesktopExpress" />-->
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    <Dependency d:Source="Installed" Id="Microsoft.VisualStudio.MPF.11.0" DisplayName="Visual Studio MPF 11.0" Version="[11.0,12.0)" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
+  </Assets>
+</PackageManifest>

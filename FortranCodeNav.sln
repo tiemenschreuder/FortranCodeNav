@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortranCodeNav", "FortranCodeNav\FortranCodeNav.csproj", "{A7F9B08E-BFC4-4523-9489-3D12D6751A07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortranCodeNavCore", "FortranCodeNavCore\FortranCodeNavCore.csproj", "{DBA83B40-68B9-43B1-B101-3BA0F7AE1BCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSIntegration", "VSIntegration\VSIntegration.csproj", "{2F0709B1-35A8-4F4C-A9E0-4B0AFAE1729B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortranCodeNavCore.Tests", "FortranCodeNavCore.Tests\FortranCodeNavCore.Tests.csproj", "{5B1FFCDF-843C-4157-9E6E-194B8D4CF291}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{16B4607A-8E4F-4365-A712-1DF3747ED1E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7F9B08E-BFC4-4523-9489-3D12D6751A07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7F9B08E-BFC4-4523-9489-3D12D6751A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7F9B08E-BFC4-4523-9489-3D12D6751A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7F9B08E-BFC4-4523-9489-3D12D6751A07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA83B40-68B9-43B1-B101-3BA0F7AE1BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA83B40-68B9-43B1-B101-3BA0F7AE1BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA83B40-68B9-43B1-B101-3BA0F7AE1BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA83B40-68B9-43B1-B101-3BA0F7AE1BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F0709B1-35A8-4F4C-A9E0-4B0AFAE1729B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F0709B1-35A8-4F4C-A9E0-4B0AFAE1729B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F0709B1-35A8-4F4C-A9E0-4B0AFAE1729B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F0709B1-35A8-4F4C-A9E0-4B0AFAE1729B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B1FFCDF-843C-4157-9E6E-194B8D4CF291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B1FFCDF-843C-4157-9E6E-194B8D4CF291}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B1FFCDF-843C-4157-9E6E-194B8D4CF291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B1FFCDF-843C-4157-9E6E-194B8D4CF291}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5B1FFCDF-843C-4157-9E6E-194B8D4CF291} = {16B4607A-8E4F-4365-A712-1DF3747ED1E3}
+	EndGlobalSection
+EndGlobal
