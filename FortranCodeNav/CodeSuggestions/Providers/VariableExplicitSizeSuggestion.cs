@@ -7,7 +7,7 @@ namespace FortranCodeNav.CodeSuggestions.Providers
     [Export(typeof(ICodeSuggestionProvider))]
     public class VariableExplicitSizeSuggestion : ICodeSuggestionProvider
     {
-        private static Regex realWithoutSizeRegex = new Regex(@"\b(?<type>REAL)\s+[\w,]", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        private static Regex realWithoutSizeRegex = new Regex(@"\b(?<type>REAL)[(\s+\w),:]", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         
         public IEnumerable<CodeSuggestionInfo> GetSuggestions(string line)
         {
