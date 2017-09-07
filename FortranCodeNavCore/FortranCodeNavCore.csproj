@@ -156,6 +156,7 @@
     <None Include="Resources\fortran_codenav_64_nobg.png" />
     <Content Include="Resources\Function_Icon.png" />
     <Content Include="Resources\Interface_Icon.png" />
+    <Content Include="Resources\Intrinsic_Icon.png" />
     <Content Include="Resources\Module_Icon.png" />
     <None Include="Resources\Type_Icon.png" />
     <None Include="Resources\Search.png" />

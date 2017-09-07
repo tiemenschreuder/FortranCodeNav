@@ -101,6 +101,833 @@ namespace FortranCodeNavCore.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to abs(a) computes the absolute value of a.
+        ///
+        ///Standard:
+        ///FORTRAN 77 and later
+        ///
+        ///Class: 
+        ///Elemental function
+        ///
+        ///Syntax: 
+        ///result = abs(a)
+        ///
+        ///Arguments: 
+        ///a - the type of the argument shall be an integer, real, or complex.
+        ///
+        ///Return value:
+        ///The return value is of the same type and kind as the argument except the return value is real for a complex argument.
+        ///http://fortranwiki.org/fortran/show/abs.
+        /// </summary>
+        internal static string intr_abs {
+            get {
+                return ResourceManager.GetString("intr_abs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to achar(i) returns the character located at position i in the ASCII collating sequence.
+        ///
+        ///Standard:
+        ///FORTRAN 77 and later, with kind argument Fortran 2003 and later
+        ///
+        ///Class: 
+        ///Elemental function
+        ///
+        ///Syntax: 
+        ///result = achar(i [, kind])
+        ///
+        ///Arguments: 
+        ///i - the type shall be integer.
+        ///kind - (optional) an integer initialization expression indicating the kind parameter of the result.
+        ///
+        ///Return value:
+        ///The return value is of type character with a length of one. If the kind argument is present, the return value i [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_achar {
+            get {
+                return ResourceManager.GetString("intr_achar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to acos(x) computes the arccosine of x (inverse of cos(x)).
+        ///
+        ///Standard:
+        ///FORTRAN 77 and later, for a complex argument Fortran 2008 and later
+        ///
+        ///Class: 
+        ///Elemental function
+        ///
+        ///Syntax:
+        ///result = acos(x)
+        ///
+        ///Arguments: 
+        ///x - The type shall be real with a magnitude that is less than one.
+        ///
+        ///Return value:
+        ///The return value is of the same type and kind as x. The real part of the result is in radians and lies in the range 0≤acos(x)≤π.
+        ///http://fortranwiki.org/fortran/show/acos.
+        /// </summary>
+        internal static string intr_acos {
+            get {
+                return ResourceManager.GetString("intr_acos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to acosh(x) computes the inverse hyperbolic cosine of x.
+        ///
+        ///Standard:
+        ///Fortran 2008 and later
+        ///
+        ///Class: 
+        ///Elemental function
+        ///
+        ///Syntax: 
+        ///result = acosh(x)
+        ///
+        ///Arguments: 
+        ///x - the type shall be real or complex.
+        ///
+        ///Return value:
+        ///The return value has the same type and kind as x. If x is complex, the imaginary part of the result is in radians and lies between 0≤Imacosh(x)≤π.
+        ///http://fortranwiki.org/fortran/show/acosh.
+        /// </summary>
+        internal static string intr_acosh {
+            get {
+                return ResourceManager.GetString("intr_acosh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to adjustl(string) will left adjust a string by removing leading spaces. Spaces are inserted at the end of the string as needed.
+        ///
+        ///Standard:
+        ///Fortran 95 and later
+        ///
+        ///Class: 
+        ///Elemental function
+        ///
+        ///Syntax: 
+        ///result = adjustl(string)
+        ///
+        ///Arguments: 
+        ///string - the type shall be character.
+        ///
+        ///Return value:
+        ///The return value is of type character and of the same kind as string where leading spaces are removed and the same number of spaces are inserted on the end of string.
+        ///http://fortranwiki.org/fortran/show/adjust [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_adjustl {
+            get {
+                return ResourceManager.GetString("intr_adjustl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to adjustr(string) will right adjust a string by removing trailing spaces. Spaces are inserted at the start of the string as needed.
+        ///
+        ///Standard:
+        ///Fortran 95 and later
+        ///
+        ///Class: 
+        ///Elemental function
+        ///
+        ///Syntax: 
+        ///result = adjustr(string)
+        ///
+        ///Arguments: 
+        ///string - the type shall be character.
+        ///
+        ///Return value:
+        ///The return value is of type character and of the same kind as string where trailing spaces are removed and the same number of spaces are inserted at the start of string.
+        ///http://fortranwiki.org/fortran/show [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_adjustsr {
+            get {
+                return ResourceManager.GetString("intr_adjustsr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to aimag(z) yields the imaginary part of complex argument z. The imag(z) and imagpart(z) intrinsic functions are provided for compatibility with g77, and their use in new code is strongly discouraged.
+        ///
+        ///Standard:
+        ///FORTRAN 77 and later
+        ///
+        ///Class: 
+        ///Elemental function
+        ///
+        ///Syntax: 
+        ///result = aimag(z)
+        ///
+        ///Arguments: 
+        ///z - The type of the argument shall be complex.
+        ///
+        ///Return value:
+        ///The return value is of type real with the kind type parameter of the argument.
+        ///http://fortranwiki.org/fortran/show/aimag.
+        /// </summary>
+        internal static string intr_aimag {
+            get {
+                return ResourceManager.GetString("intr_aimag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to aint(a [, kind]) truncates its argument to a whole number.
+        ///
+        ///Standard:
+        ///FORTRAN 77 and later
+        ///
+        ///Class: 
+        ///Elemental function
+        ///
+        ///Syntax: 
+        ///result = aint(a [, kind])
+        ///
+        ///Arguments: 
+        ///a - the type of the argument shall be real.
+        ///kind - (optional) an integer initialization expression indicating the kind parameter of the result.
+        ///
+        ///Return value:
+        ///The return value is of type real with the kind type parameter of the argument if the optional kind is absent; otherwise, the kind type parameter will be given by kind. I [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_aint {
+            get {
+                return ResourceManager.GetString("intr_aint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to all(mask [, dim]) determines if all the values are true in mask in the array along dimension dim.
+        ///
+        ///Standard:
+        ///Fortran 95 and later
+        ///
+        ///Class: 
+        ///Transformational function
+        ///
+        ///Syntax: 
+        ///result = all(mask [, dim])
+        ///
+        ///Arguments: 
+        ///mask - the type of the argument shall be logical and it shall not be scalar.
+        ///dim - (optional) dim shall be a scalar integer with a value that lies between one and the rank of mask.
+        ///
+        ///Return value:
+        ///all(mask) returns a scalar value of type logical where the kind type parameter is the [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_all {
+            get {
+                return ResourceManager.GetString("intr_all", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to allocated(array) and allocated(scalar) check the allocation status of array and scalar, respectively.
+        ///
+        ///Standard:
+        ///Fortran 95 and later. Note, the scalar= keyword and allocatable scalar entities are available in Fortran 2003 and later.
+        ///
+        ///Class: 
+        ///Inquiry function
+        ///
+        ///Syntax: 
+        ///result = allocated(array)
+        ///result = allocated(scalar)
+        ///Arguments: 
+        ///array - the argument shall be an allocatable array.
+        ///scalar - the argument shall be an allocatable scalar.
+        ///
+        ///Return value:
+        ///The return value is a scalar logical wit [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_allocated {
+            get {
+                return ResourceManager.GetString("intr_allocated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to anint(a [, kind]) rounds its argument to the nearest whole number.
+        ///
+        ///Standard:
+        ///FORTRAN 77 and later
+        ///
+        ///Class: 
+        ///Elemental function
+        ///
+        ///Syntax: 
+        ///result = anint(a [, kind])
+        ///
+        ///Arguments: 
+        ///a - the type of the argument shall be real.
+        ///kind - (optional) an integer initialization expression indicating the kind parameter of the result.
+        ///
+        ///Return value:
+        ///The return value is of type real with the kind type parameter of the argument if the optional kind is absent; otherwise, the kind type parameter will be given b [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_anint {
+            get {
+                return ResourceManager.GetString("intr_anint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to any(mask [, dim]) determines if any of the values in the logical array mask along dimension dim are .true..
+        ///
+        ///Standard:
+        ///Fortran 95 and later
+        ///
+        ///Class: 
+        ///Transformational function
+        ///
+        ///Syntax: 
+        ///result = any(mask [, dim])
+        ///
+        ///Arguments: 
+        ///mask - the type of the argument shall be logical and it shall not be scalar.
+        ///dim - (optional) dim shall be a scalar integer with a value that lies between one and the rank of mask.
+        ///
+        ///Return value:
+        ///any(mask) returns a scalar value of type logical where the kind type parame [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_any {
+            get {
+                return ResourceManager.GetString("intr_any", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to asin(x) computes the arcsine of its x (inverse of sin(x)).
+        ///
+        ///Standard:
+        ///FORTRAN 77 and later, for a complex argument Fortran 2008 or later
+        ///
+        ///Class: 
+        ///Elemental function
+        ///
+        ///Syntax: 
+        ///result = asin(x)
+        ///
+        ///Arguments: 
+        ///x - The type shall be either real and a magnitude that is less than or equal to one or be complex.
+        ///
+        ///Return value:
+        ///The return value is of the same type and kind as x. The real part of the result is in radians and lies in the range −π/2≤asin(x)≤π/2.
+        ///http://fortranwiki.org/fortran/show/asin.
+        /// </summary>
+        internal static string intr_asin {
+            get {
+                return ResourceManager.GetString("intr_asin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to asinh(x) computes the inverse hyperbolic sine of x.
+        ///
+        ///Standard:
+        ///Fortran 2008 and later
+        ///
+        ///Class: 
+        ///Elemental function
+        ///
+        ///Syntax: 
+        ///result = asinh(x)
+        ///Arguments: 
+        ///x - The type shall be real or complex.
+        ///
+        ///Return value:
+        ///The return value is of the same type and kind as x. If x is complex, the imaginary part of the result is in radians and lies between −π/2≤Imasinh(x)≤π/2 -\pi/2.
+        ///http://fortranwiki.org/fortran/show/asinh.
+        /// </summary>
+        internal static string intr_asinh {
+            get {
+                return ResourceManager.GetString("intr_asinh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to associated(pointer [, target]) determines the status of the pointer pointer or if pointer is associated with the target target.
+        ///
+        ///Standard:
+        ///Fortran 95 and later
+        ///
+        ///Class: 
+        ///Inquiry function
+        ///
+        ///Syntax: 
+        ///result = associated(pointer [, target])
+        ///
+        ///Arguments: 
+        ///pointer - pointer shall have the pointer attribute and it can be of any type.
+        ///target - (Optional) target shall be a pointer or a target. It must have the same type, kind type parameter, and array rank as pointer.
+        ///The association status of neither po [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_associated {
+            get {
+                return ResourceManager.GetString("intr_associated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to atan(x) computes the arctangent of x.
+        ///
+        ///Standard:
+        ///FORTRAN 77 and later; for a complex argument and for two arguments Fortran 2008 or later
+        ///
+        ///Class: 
+        ///Elemental function
+        ///
+        ///Syntax: 
+        ///result = atan(x)
+        ///result = atan(y, x)
+        ///Arguments: 
+        ///x - The type shall be real or complex; if y is present, x shall be real.
+        ///y - Shall be of the same type and kind as x.
+        ///
+        ///Return value:
+        ///The return value is of the same type and kind as x. If y is present, the result is identical to atan2(y,x). Otherwise, it the arcus tangen [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_atan {
+            get {
+                return ResourceManager.GetString("intr_atan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to atomic_add(atom, value) atomically adds the value of var to the variable atom. When stat is present and the invocation was successful, it is assigned the value 0. If it is present and the invocation has failed, it is assigned a positive value; in particular, for a coindexed atom, if the remote image has stopped, it is assigned the value of iso_fortran_env‘s stat_stopped_image and if the remote image has failed, the value stat_failed_image.
+        ///
+        ///Standard:
+        ///TS 18508 or later
+        ///
+        ///Class: 
+        ///Atomic subroutine
+        ///
+        ///Syn [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_atomic_add {
+            get {
+                return ResourceManager.GetString("intr_atomic_add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to atomic_cas compares the variable atom with the value of compare; if the value is the same, atom is set to the value of new. Additionally, old is set to the value of atom that was used for the comparison. When stat is present and the invocation was successful, it is assigned the value 0. If it is present and the invocation has failed, it is assigned a positive value; in particular, for a coindexed atom, if the remote image has stopped, it is assigned the value of iso_fortran_env‘s stat_stopped_image and if t [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_atomic_cas {
+            get {
+                return ResourceManager.GetString("intr_atomic_cas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to atomic_define(atom, value) defines the variable atom with the value value atomically. When stat is present and the invocation was successful, it is assigned the value 0. If it is present and the invocation has failed, it is assigned a positive value; in particular, for a coindexed atom, if the remote image has stopped, it is assigned the value of iso_fortran_env‘s stat_stopped_image and if the remote image has failed, the value stat_failed_image.
+        ///
+        ///Standard:
+        ///Fortran 2008 and later; with stat, TS 18508 or  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_atomic_define {
+            get {
+                return ResourceManager.GetString("intr_atomic_define", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to atomic_fetch_add(atom, value, old) atomically stores the value of atom in old and adds the value of var to the variable atom. When stat is present and the invocation was successful, it is assigned the value 0. If it is present and the invocation has failed, it is assigned a positive value; in particular, for a coindexed atom, if the remote image has stopped, it is assigned the value of iso_fortran_env‘s stat_stopped_image and if the remote image has failed, the value stat_failed_image.
+        ///
+        ///Standard:
+        ///TS 1850 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_atomic_fetch_add {
+            get {
+                return ResourceManager.GetString("intr_atomic_fetch_add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to atomic_fetch_and(atom, value, old) atomically stores the value of atom in old and defines atom with the bitwise and between the values of atom and value. When stat is present and the invocation was successful, it is assigned the value 0. If it is present and the invocation has failed, it is assigned a positive value; in particular, for a coindexed atom, if the remote image has stopped, it is assigned the value of iso_fortran_env‘s stat_stopped_image and if the remote image has failed, the value stat_failed_ [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_atomic_fetch_and {
+            get {
+                return ResourceManager.GetString("intr_atomic_fetch_and", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to atomic_fetch_or(atom, value, old) atomically stores the value of atom in old and defines atom with the bitwise or between the values of atom and value. When stat is present and the invocation was successful, it is assigned the value 0. If it is present and the invocation has failed, it is assigned a positive value; in particular, for a coindexed atom, if the remote image has stopped, it is assigned the value of iso_fortran_env‘s stat_stopped_image and if the remote image has failed, the value stat_failed_im [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_atomic_fetch_or {
+            get {
+                return ResourceManager.GetString("intr_atomic_fetch_or", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to atomic_fetch_xor(atom, value, old) atomically stores the value of atom in old and defines atom with the bitwise xor between the values of atom and value. When stat is present and the invocation was successful, it is assigned the value 0. If it is present and the invocation has failed, it is assigned a positive value; in particular, for a coindexed atom, if the remote image has stopped, it is assigned the value of iso_fortran_env‘s stat_stopped_image and if the remote image has failed, the value stat_failed_ [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_atomic_fetch_xor {
+            get {
+                return ResourceManager.GetString("intr_atomic_fetch_xor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to atomic_or(atom, value) atomically defines atom with the bitwise or between the values of atom and value. When stat is present and the invocation was successful, it is assigned the value 0. If it is present and the invocation has failed, it is assigned a positive value; in particular, for a coindexed atom, if the remote image has stopped, it is assigned the value of iso_fortran_env‘s stat_stopped_image and if the remote image has failed, the value stat_failed_image.
+        ///
+        ///Standard:
+        ///TS 18508 or later
+        ///
+        ///Class:  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_atomic_or {
+            get {
+                return ResourceManager.GetString("intr_atomic_or", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to atomic_ref(atom, value) atomically assigns the value of the variable atom to value. When stat is present and the invocation was successful, it is assigned the value 0. If it is present and the invocation has failed, it is assigned a positive value; in particular, for a coindexed atom, if the remote image has stopped, it is assigned the value of iso_fortran_env‘s stat_stopped_image and if the remote image has failed, the value stat_failed_image.
+        ///
+        ///Standard:
+        ///Fortran 2008 and later; with stat, TS 18508 or la [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_atomic_ref {
+            get {
+                return ResourceManager.GetString("intr_atomic_ref", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to call atomic_xor(atom, value [, stat])
+        ///Arguments: 
+        ///atom - Scalar coarray or coindexed variable of integer type with atomic_int_kind kind.
+        ///value - Scalar of the same type as atom. If the kind is different, the value is converted to the kind of atom.
+        ///stat - (optional) Scalar default-kind integer variable.
+        ///http://fortranwiki.org/fortran/show/atomic_xor.
+        /// </summary>
+        internal static string intr_atomic_xor {
+            get {
+                return ResourceManager.GetString("intr_atomic_xor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bessel_j0(x) computes the Bessel function of the first kind of order 0 of x.
+        ///
+        ///Standard:
+        ///Fortran 2008 and later
+        ///
+        ///Class:
+        ///Elemental function
+        ///
+        ///Syntax
+        ///result = bessel_j0(x)
+        ///
+        ///Arguments:
+        ///x - The type shall be real.
+        ///
+        ///Return value:
+        ///The return value is of type real and lies in the range −0.4027...≤Bessel(0,x)≤1. It has the same kind as x.
+        ///http://fortranwiki.org/fortran/show/bessel_j0.
+        /// </summary>
+        internal static string intr_bessel_j0 {
+            get {
+                return ResourceManager.GetString("intr_bessel_j0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bessel_j1(x) computes the Bessel function of the first kind of order 1 of x.
+        ///
+        ///Standard:
+        ///Fortran 2008 and later
+        ///
+        ///Class:
+        ///Elemental function
+        ///
+        ///Syntax
+        ///result = bessel_j1(x)
+        ///
+        ///Arguments:
+        ///x - The type shall be real.
+        ///
+        ///Return value:
+        ///The return value is of type real and lies in the range −0.5818...≤Bessel(0,x)≤0.5818. It has the same kind as x.
+        ///http://fortranwiki.org/fortran/show/bessel_j1.
+        /// </summary>
+        internal static string intr_bessel_j1 {
+            get {
+                return ResourceManager.GetString("intr_bessel_j1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bessel_jn(n, x) computes the Bessel function of the first kind of order n of x. If n and x are arrays, their ranks and shapes shall conform.
+        ///
+        ///bessel_jn(n1, n2, x) returns an array with the Bessel functions of the first kind of the orders n1 to n2.
+        ///
+        ///Standard:
+        ///Fortran 2008 and later
+        ///
+        ///Class:
+        ///Elemental function, except for the transformational variant bessel_jn(n1, n2, x).
+        ///
+        ///Syntax
+        ///result = bessel_jn(n, x)
+        ///result = bessel_jn(n1, n2, x)
+        ///
+        ///Arguments:
+        ///n - Shall be a scalar or an array of type integer. [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_bessel_jn {
+            get {
+                return ResourceManager.GetString("intr_bessel_jn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bessel_y0(x) computes the Bessel function of the second kind of order 0 of x.
+        ///
+        ///Standard:
+        ///Fortran 2008 and later
+        ///
+        ///Class:
+        ///Elemental function
+        ///
+        ///Syntax
+        ///result = bessel_y0(x)
+        ///
+        ///Arguments:
+        ///x - The type shall be real.
+        ///
+        ///Return value:
+        ///The return value is of type real. It has the same kind as x.
+        ///http://fortranwiki.org/fortran/show/bessel_y0.
+        /// </summary>
+        internal static string intr_bessel_y0 {
+            get {
+                return ResourceManager.GetString("intr_bessel_y0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bessel_y1(x) computes the Bessel function of the second kind of order 1 of x.
+        ///
+        ///Standard:
+        ///Fortran 2008 and later
+        ///
+        ///Class:
+        ///Elemental function
+        ///
+        ///Syntax
+        ///result = bessel_y1(x)
+        ///
+        ///Arguments:
+        ///x - The type shall be real.
+        ///
+        ///Return value:
+        ///The return value is real. It has the same kind as x.
+        ///http://fortranwiki.org/fortran/show/bessel_y1.
+        /// </summary>
+        internal static string intr_bessel_y1 {
+            get {
+                return ResourceManager.GetString("intr_bessel_y1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bessel_yn(n, x) computes the Bessel function of the second kind of order n of x. If n and x are arrays, their ranks and shapes shall conform.
+        ///
+        ///bessel_yn(n1, n2, x) returns an array with the Bessel functions of the first kind of the orders n1 to n2.
+        ///
+        ///Standard:
+        ///Fortran 2008 and later
+        ///
+        ///Class:
+        ///Elemental function, except for the transformational function bessel_yn(n1, n2, x)
+        ///
+        ///Syntax
+        ///result = bessel_yn(n, x)
+        ///result = bessel_yn(n1, n2, x)
+        ///
+        ///Arguments:
+        ///n - Shall be a scalar or an array of type integer [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_bessel_yn {
+            get {
+                return ResourceManager.GetString("intr_bessel_yn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bge(i, j) determines whether an integer is a bitwise greater than or equal to another.
+        ///
+        ///Standard:
+        ///Fortran 2008 and later
+        ///
+        ///Class:
+        ///Elemental function
+        ///
+        ///Syntax
+        ///result = bge(i, j)
+        ///
+        ///Arguments:
+        ///i - Shall be of integer type.
+        ///j - Shall be of integer type, and of the same kind as i.
+        ///
+        ///Return value:
+        ///The return value is of type logical and of the default kind.
+        ///http://fortranwiki.org/fortran/show/bge.
+        /// </summary>
+        internal static string intr_bge {
+            get {
+                return ResourceManager.GetString("intr_bge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bgt(i, j) determines whether an integer is bitwise greater than another.
+        ///
+        ///Standard:
+        ///Fortran 2008 and later
+        ///
+        ///Class:
+        ///Elemental function
+        ///
+        ///Syntax
+        ///result = bgt(i, j)
+        ///
+        ///Arguments:
+        ///i - Shall be of integer type.
+        ///j - Shall be of integer type, and of the same kind as i.
+        ///
+        ///Return value:
+        ///The return value is of type logical and of the default kind.
+        ///http://fortranwiki.org/fortran/show/bgt.
+        /// </summary>
+        internal static string intr_bgt {
+            get {
+                return ResourceManager.GetString("intr_bgt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to bit_size(i) returns the number of bits (integer precision plus sign bit) represented by the type of i.
+        ///
+        ///Standard:
+        ///Fortran 95 and later
+        ///
+        ///Class:
+        ///Inquiry function
+        ///
+        ///Syntax
+        ///result = bit_size(i)
+        ///
+        ///Arguments:
+        ///i - The type shall be integer.
+        ///
+        ///Return value:
+        ///The return value is of type integer
+        ///http://fortranwiki.org/fortran/show/bit_size.
+        /// </summary>
+        internal static string intr_bit_size {
+            get {
+                return ResourceManager.GetString("intr_bit_size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ble(i, j) determines whether an integer is bitwise less than or equal to another.
+        ///
+        ///Standard:
+        ///Fortran 2008 and later
+        ///
+        ///Class:
+        ///Elemental function
+        ///
+        ///Syntax
+        ///result = ble(i, j)
+        ///
+        ///Arguments:
+        ///i - Shall be of integer type.
+        ///j - Shall be of integer type, and of the same kind as i.
+        ///
+        ///Return value:
+        ///The return value is of type logical and of the default kind.
+        ///http://fortranwiki.org/fortran/show/ble.
+        /// </summary>
+        internal static string intr_ble {
+            get {
+                return ResourceManager.GetString("intr_ble", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to blt(i, j) determines whether an integer is bitwise less than another.
+        ///
+        ///Standard:
+        ///Fortran 2008 and later
+        ///
+        ///Class:
+        ///Elemental function
+        ///
+        ///Syntax
+        ///result = blt(i, j)
+        ///
+        ///Arguments:
+        ///i - Shall be of integer type.
+        ///j - Shall be of integer type, and of the same kind as i.
+        ///
+        ///Return value:
+        ///The return value is of type logical and of the default kind.
+        ///http://fortranwiki.org/fortran/show/blt.
+        /// </summary>
+        internal static string intr_blt {
+            get {
+                return ResourceManager.GetString("intr_blt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to btest(i,pos) returns logical .true. if the bit at pos in i is set.
+        ///
+        ///Standard:
+        ///Fortran 95 and later
+        ///
+        ///Class:
+        ///Elemental function
+        ///
+        ///Syntax
+        ///result = btest(i, pos)
+        ///
+        ///Arguments:
+        ///i - The type shall be integer.
+        ///pos - The type shall be integer. A value of zero refers to the least significant bit.
+        ///
+        ///Return value:
+        ///The return value is of type logical.
+        ///http://fortranwiki.org/fortran/show/btest.
+        /// </summary>
+        internal static string intr_btest {
+            get {
+                return ResourceManager.GetString("intr_btest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Intrinsic_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Intrinsic_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Module_Icon {

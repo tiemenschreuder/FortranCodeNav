@@ -9,6 +9,9 @@ using FortranCodeNavCore.SyntaxTrees;
 using VSIntegration;
 using VSIntegration.CodeComplete;
 using Type = FortranCodeNavCore.Fortran.Elements.Type;
+using System.Collections;
+using System.Globalization;
+using System.Drawing;
 
 namespace FortranCodeNavCore.Commands
 {
@@ -24,10 +27,18 @@ namespace FortranCodeNavCore.Commands
                                                             "DOUBLE PRECISION", "CHARACTER", "LOGICAL",
                                                             "DO", "ENDDO", "READ", "READ(*,*)", "WRITE", "WRITE(*,*)",
                                                             "FORMAT", "END SUBROUTINE", "END FUNCTION",
-                                                            "END MODULE", "END PROGRAM", "COS", "SIN", "LOG",
-                                                            "SQRT", "ATAN", "CONTINUE", "GOTO"
+                                                            "END MODULE", "END PROGRAM", "CONTINUE", "GOTO"
                                                         };
-        
+
+        // Initialize the fortran intrinsics (+ tooltip) from the Resources.resx file.
+        private readonly Dictionary<string, string> fortranIntrinsics = Properties.Resources.ResourceManager
+            .GetResourceSet(CultureInfo.CurrentUICulture, true, true)
+            .Cast<DictionaryEntry>()
+            .Where(de => ((string)de.Key).StartsWith("intr_"))
+            .ToDictionary(de => ((string)de.Key).Substring(5).ToUpper(), de => (string)de.Value);
+
+        private static readonly Bitmap IntrinsicIcon = Properties.Resources.Intrinsic_Icon;
+
         internal void OnCodeCompleteActivating(CompletionSession session)
         {
             session.Coordinate = VisualStudio.GetCaretPositionInScreenCoordinates();
@@ -150,6 +161,11 @@ namespace FortranCodeNavCore.Commands
                     {
                         completionItems.Add(new CompletionItem(keyword, null));
                     }
+
+                    foreach (var intrinsic in fortranIntrinsics)
+                    {
+                        completionItems.Add(new CompletionItem(intrinsic.Key, IntrinsicIcon) { ToolTip = intrinsic.Value });
+                    }
                 }
                 session.SetCompletionSet(completionItems, filter);
             }
@@ -184,8 +200,16 @@ namespace FortranCodeNavCore.Commands
                 var method = allMethodsInScope.FirstOrDefault(m => String.Equals(m.Name, methodName,
                                                                                  StringComparison.InvariantCultureIgnoreCase));
 
-                if (method == null) 
+                if (method == null)
+                {
+                    if (fortranIntrinsics.ContainsKey(methodName))
+                    {
+                        var intrinsicDoc = fortranIntrinsics[methodName];
+                        var fistLineOfDoc = intrinsicDoc.Split('\n').FirstOrDefault() ?? ""; // take first line of documentation
+                        session.SignatureToolTip = fistLineOfDoc;
+                    }
                     return;
+                }
 
                 var declarationParser = new FortranDeclarationParser();
                 var signatureParser = new FortranSignatureParser();
