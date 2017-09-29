@@ -918,6 +918,446 @@ namespace FortranCodeNavCore.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 
+        ///c_associated(c_prt_1[, c_ptr_2]) determines the status of the C pointer c_ptr_1 or if c_ptr_1 is associated with the target c_ptr_2.
+        ///
+        ///Standard:
+        ///Fortran 2003 and later
+        ///
+        ///Class:
+        ///Inquiry function
+        ///
+        ///Syntax:
+        ///result = c_associated(c_prt_1[, c_ptr_2])
+        ///Arguments:
+        ///c_ptr_1 - Scalar of the type c_ptr or c_funptr.
+        ///c_ptr_2 - (Optional) Scalar of the same type as c_ptr_1.
+        ///
+        ///Return value:
+        ///The return value is of type logical; it is .false. if either c_ptr_1 is a C NULL pointer or if c_ptr1 and c_ptr_2 point to different addr [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_c_associated {
+            get {
+                return ResourceManager.GetString("intr_c_associated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to c_f_pointer(cptr, fptr[, shape]) Assign the target, the C pointer, cptr to the Fortran pointer fptr and specify its shape.
+        ///
+        ///Standard:
+        ///Fortran 2003 and later
+        ///
+        ///Class:
+        ///Subroutine
+        ///
+        ///Syntax:
+        ///call c_f_pointer(cptr, fptr[, shape])
+        ///Arguments:
+        ///cptr - scalar of the type c_ptr. It is intent(in).
+        ///fptr - pointer interoperable with cptr. It is intent(out).
+        ///shape - (Optional) Rank-one array of type integer with intent(in). It shall be present if and only if fptr is an array. The size must be equal to the rank of fptr.
+        ///http [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_c_f_pointer {
+            get {
+                return ResourceManager.GetString("intr_c_f_pointer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
+        ///c_f_procpointer(cptr, fptr) assigns the target of the C function pointer cptr to the Fortran procedure pointer fptr.
+        ///
+        ///Standard:
+        ///Fortran 2003 and later
+        ///
+        ///Class:
+        ///Subroutine
+        ///
+        ///Syntax:
+        ///call c_f_procpointer(cptr, fptr)
+        ///
+        ///Arguments:
+        ///cptr - scalar of the type c_funptr. It is intent(in).
+        ///fptr - procedure pointer interoperable with cptr. It is intent(out).
+        ///http://fortranwiki.org/fortran/show/c_f_procpointer.
+        /// </summary>
+        internal static string intr_c_f_procpointer {
+            get {
+                return ResourceManager.GetString("intr_c_f_procpointer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to c_funloc(x) determines the C address of the argument.
+        ///
+        ///Standard:
+        ///Fortran 2003 and later
+        ///
+        ///Class:
+        ///Inquiry function
+        ///
+        ///Syntax:
+        ///result = c_funloc(x)
+        ///Arguments:
+        ///x - Interoperable function or pointer to such function.
+        ///
+        ///Return value:
+        ///The return value is of type c_funptr and contains the C address of the argument.
+        ///http://fortranwiki.org/fortran/show/c_funloc.
+        /// </summary>
+        internal static string intr_c_funloc {
+            get {
+                return ResourceManager.GetString("intr_c_funloc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to c_loc(x) determines the C address of the argument.
+        ///
+        ///Standard:
+        ///Fortran 2003 and later
+        ///
+        ///Class:
+        ///Inquiry function
+        ///
+        ///Syntax:
+        ///result = c_loc(x)
+        ///Arguments:
+        ///x - Shall have either the pointer or target attribute. It shall not be a coindexed object. It shall either be a variable with interoperable type and kind type parameters, or be a scalar, nonpolymorphic variable with no length type parameters.
+        ///
+        ///Return value:
+        ///The return value is of type c_ptr and contains the C address of the argument.
+        ///http://fortranwiki.org/fortr [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_c_loc {
+            get {
+                return ResourceManager.GetString("intr_c_loc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to c_sizeof(x) calculates the number of bytes of storage the expression x occupies.
+        ///
+        ///Standard:
+        ///Fortran 2008
+        ///
+        ///Class:
+        ///Intrinsic function
+        ///
+        ///Syntax:
+        ///n = c_sizeof(x)
+        ///Arguments:
+        ///x - The argument shall be an interoperable data entity.
+        ///
+        ///Return value:
+        ///The return value is of type integer and of the system-dependent kind c_size_t (from the iso_c_binding module). Its value is the number of bytes occupied by the argument. If the argument has the pointer attribute, the number of bytes of the storage area pointed to is return [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_c_sizeof {
+            get {
+                return ResourceManager.GetString("intr_c_sizeof", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ceiling(a) returns the least integer greater than or equal to a.
+        ///
+        ///Standard:
+        ///Fortran 95 and later
+        ///
+        ///Class:
+        ///Elemental function
+        ///
+        ///Syntax:
+        ///result = ceiling(a [, kind])
+        ///
+        ///Arguments:
+        ///a - The type shall be real.
+        ///kind - (Optional) An integer initialization expression indicating the kind parameter of the result.
+        ///
+        ///Return value:
+        ///The return value is of type integer(kind) if kind is present and a default-kind integer otherwise.
+        ///http://fortranwiki.org/fortran/show/ceiling.
+        /// </summary>
+        internal static string intr_ceiling {
+            get {
+                return ResourceManager.GetString("intr_ceiling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to char(i [, kind]) returns the character represented by the integer i.
+        ///
+        ///Standard:
+        ///FORTRAN 77 and later
+        ///
+        ///Class:
+        ///Elemental function
+        ///
+        ///Syntax:
+        ///result = char(i [, kind])
+        ///
+        ///Arguments:
+        ///i - The type shall be integer.
+        ///kind - (Optional) An integer initialization expression indicating the kind parameter of the result.
+        ///
+        ///Return value:
+        ///The return value is of type character(1)
+        ///http://fortranwiki.org/fortran/show/char.
+        /// </summary>
+        internal static string intr_char {
+            get {
+                return ResourceManager.GetString("intr_char", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cmplx(x [, y [, kind]]) returns a complex number where x is converted to the real component. If y is present it is converted to the imaginary component. If y is not present then the imaginary component is set to 0.0. If x is complex then y must not be present.
+        ///
+        ///Standard:
+        ///FORTRAN 77 and later
+        ///
+        ///Class:
+        ///Elemental function
+        ///
+        ///Syntax:
+        ///result = cmplx(x [, y [, kind]])
+        ///
+        ///Arguments:
+        ///x - The type may be integer, real, or complex.
+        ///y - (Optional; only allowed if x is not complex.) May be integer or real.
+        ///kind - (Optional) [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_cmplx {
+            get {
+                return ResourceManager.GetString("intr_cmplx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to co_broadcast copies the value of argument a on the image with image index source_image to all images in the current team. a becomes defined as if by intrinsic assignment. If the execution was successful and stat is present, it is assigned the value zero. If the execution failed, stat gets assigned a nonzero value and, if present, errmsg gets assigned a value describing the occurred error.
+        ///
+        ///Standard:
+        ///TS 18508 or later
+        ///
+        ///Class:
+        ///Collective subroutine
+        ///
+        ///Syntax:
+        ///call co_broadcast(a, source_image [, stat, errmsg])
+        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_co_broadcast {
+            get {
+                return ResourceManager.GetString("intr_co_broadcast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to co_max determines element-wise the maximal value of a on all images of the current team. If result_image is present, the maximum values are returned in a on the specified image only and the value of a on the other images become undefined. If result_image is not present, the value is returned on all images. If the execution was successful and stat is present, it is assigned the value zero. If the execution failed, stat gets assigned a nonzero value and, if present, errmsg gets assigned a value describing the [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_co_max {
+            get {
+                return ResourceManager.GetString("intr_co_max", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to co_min determines element-wise the minimal value of a on all images of the current team. If result_image is present, the minimal values are returned in a on the specified image only and the value of a on the other images become undefined. If result_image is not present, the value is returned on all images. If the execution was successful and stat is present, it is assigned the value zero. If the execution failed, stat gets assigned a nonzero value and, if present, errmsg gets assigned a value describing the [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_co_min {
+            get {
+                return ResourceManager.GetString("intr_co_min", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to co_reduce determines element-wise the reduction of the value of a on all images of the current team. The pure function passed as operator is used to pairwise reduce the values of a by passing either the value of a of different images or the result values of such a reduction as argument. If a is an array, the deduction is done element wise. If result_image is present, the result values are returned in a on the specified image only and the value of a on the other images become undefined. If result_image is no [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_co_reduce {
+            get {
+                return ResourceManager.GetString("intr_co_reduce", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to co_sum sums up the values of each element of a on all images of the current team. If result_image is present, the summed-up values are returned in a on the specified image only and the value of a on the other images become undefined. If result_image is not present, the value is returned on all images. If the execution was successful and stat is present, it is assigned the value zero. If the execution failed, stat gets assigned a nonzero value and, if present, errmsg gets assigned a value describing the occu [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_co_sum {
+            get {
+                return ResourceManager.GetString("intr_co_sum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to command_argument_count returns the number of arguments passed on the command line when the containing program was invoked.
+        ///
+        ///Standard:
+        ///Fortran 2003 and later
+        ///
+        ///Class:
+        ///Inquiry function
+        ///
+        ///Syntax:
+        ///result = command_argument_count()
+        ///Arguments:
+        ///None
+        ///
+        ///
+        ///Return value:
+        ///The return value is of type integer(4)
+        ///http://fortranwiki.org/fortran/show/command_argument_count.
+        /// </summary>
+        internal static string intr_command_argument_count {
+            get {
+                return ResourceManager.GetString("intr_command_argument_count", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to compiler_options returns a string with the options used for compiling.
+        ///
+        ///Standard:
+        ///Fortran 2008
+        ///
+        ///Class:
+        ///Inquiry function of the module iso_fortran_env
+        ///
+        ///Syntax:
+        ///str = compiler_options()
+        ///Arguments:
+        ///None.
+        ///
+        ///
+        ///Return value:
+        ///The return value is a default-kind string with system-dependent length. It contains the compiler flags used to compile the file, which called the compiler_options intrinsic.
+        ///http://fortranwiki.org/fortran/show/compiler_options.
+        /// </summary>
+        internal static string intr_compiler_options {
+            get {
+                return ResourceManager.GetString("intr_compiler_options", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to conjg(z) returns the conjugate of z. If z is (x, y) then the result is (x, -y)
+        ///
+        ///Standard:
+        ///FORTRAN 77 and later
+        ///
+        ///Class:
+        ///Elemental function
+        ///
+        ///Syntax:
+        ///z = conjg(z)
+        ///
+        ///Arguments:
+        ///z - The type shall be complex.
+        ///
+        ///Return value:
+        ///The return value is of type complex.
+        ///http://fortranwiki.org/fortran/show/conjg.
+        /// </summary>
+        internal static string intr_conjg {
+            get {
+                return ResourceManager.GetString("intr_conjg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cos(x) computes the cosine of x.
+        ///
+        ///Standard:
+        ///FORTRAN 77 and later
+        ///
+        ///Class:
+        ///Elemental function
+        ///
+        ///Syntax:
+        ///result = cos(x)
+        ///
+        ///Arguments:
+        ///x - The type shall be real or complex.
+        ///
+        ///Return value:
+        ///The return value is of the same type and kind as x. The real part of the result is in radians. If x is of the type real, the return value lies in the range -1 &lt;= cos(x) &lt;= 1.
+        ///http://fortranwiki.org/fortran/show/cos.
+        /// </summary>
+        internal static string intr_cos {
+            get {
+                return ResourceManager.GetString("intr_cos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cosh(x) computes the hyperbolic cosine of x.
+        ///
+        ///Standard:
+        ///FORTRAN 77 and later, for a complex argument Fortran 2008 or later
+        ///
+        ///Class:
+        ///Elemental function
+        ///
+        ///Syntax:
+        ///x = cosh(x)
+        ///Arguments:
+        ///x - The type shall be real or complex.
+        ///
+        ///Return value:
+        ///The return value has same type and kind as x. If x is complex, the imaginary part of the result is in radians. If x is real, the return value has a lower bound of one, cosh(x)≥1.
+        ///http://fortranwiki.org/fortran/show/cosh.
+        /// </summary>
+        internal static string intr_cosh {
+            get {
+                return ResourceManager.GetString("intr_cosh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to count(mask [, dim, kind]) Counts the number of .true. elements in a logical mask, or, if the dim argument is supplied, counts the number of elements along each row of the array in the dim direction. If the array has zero size, or all of the elements of mask are .false., then the result is 0.
+        ///
+        ///Standard:
+        ///Fortran 95 and later, with kind argument Fortran 2003 and later
+        ///
+        ///Class:
+        ///Transformational function
+        ///
+        ///Syntax:
+        ///result = count(mask [, dim, kind])
+        ///Arguments:
+        ///mask - The type shall be logical.
+        ///dim - (Optional) The  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_count {
+            get {
+                return ResourceManager.GetString("intr_count", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Returns a real value representing the elapsed CPU time in seconds. This is useful for testing segments of code to determine execution time.
+        ///
+        ///If a time source is available, time will be reported with microsecond resolution. If no time source is available, time is set to -1.0.
+        ///
+        ///Note that time may contain a, system dependent, arbitrary offset and may not start with 0.0. For cpu_time, the absolute value is meaningless, only differences between subsequent calls to this subroutine, as shown in the example below,  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_cpu_time {
+            get {
+                return ResourceManager.GetString("intr_cpu_time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cshift(array, shift [, dim]) performs a circular shift on elements of array along the dimension of dim. If dim is omitted it is taken to be 1. dim is a scaler of type integer in the range of 1≤DIM≤n where n n is the rank of array. If the rank of array is one, then all elements of array are shifted by shift places. If rank is greater than one, then all complete rank one sections of array along the given dimension are shifted. Elements shifted out one end of each rank one section are shifted back in the other [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string intr_cshift {
+            get {
+                return ResourceManager.GetString("intr_cshift", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Intrinsic_Icon {
