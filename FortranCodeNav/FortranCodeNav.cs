@@ -11,6 +11,7 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using EnvDTE80;
 using EnvDTE;
+using System.Threading;
 
 namespace FortranCodeNav
 {
@@ -31,15 +32,15 @@ namespace FortranCodeNav
     /// To get loaded into VS, the package must be referred by &lt;Asset Type="Microsoft.VisualStudio.VsPackage" ...&gt; in .vsixmanifest file.
     /// </para>
     /// </remarks>
-    [PackageRegistration(UseManagedResourcesOnly = true)]
+    [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About
     [Guid(FortranCodeNav.PackageGuidString)]
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", 
         Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
     [ProvideMenuResource("Menus.ctmenu", 1)]
-    [ProvideAutoLoad(UIContextGuids.NoSolution)]
-    [ProvideAutoLoad(UIContextGuids.SolutionExists)]
-    public sealed class FortranCodeNav : Package
+    [ProvideAutoLoad(UIContextGuids.NoSolution, PackageAutoLoadFlags.BackgroundLoad)]
+    [ProvideAutoLoad(UIContextGuids.SolutionExists, PackageAutoLoadFlags.BackgroundLoad)]
+    public sealed class FortranCodeNav : AsyncPackage
     {
         /// <summary>
         /// FortranCodeNav GUID string.
@@ -62,14 +63,19 @@ namespace FortranCodeNav
         private readonly VSIntegration.VisualStudioIDE vsIntegration = new VSIntegration.VisualStudioIDE();
         private FortranCodeNavCore.FortranCodeNavCore fortranCodeNav;
 
+        protected override async System.Threading.Tasks.Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
+        {
+            await JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
+            InitializeCore();
+            await base.InitializeAsync(cancellationToken, progress);
+        }
+
         /// <summary>
         /// Initialization of the package; this method is called right after the package is sited, so this is the place
         /// where you can put all the initialization code that rely on services provided by VisualStudio.
         /// </summary>
-        protected override void Initialize()
+        private void InitializeCore()
         {
-            base.Initialize();
-
             var applicationObject = (DTE2)GetService(typeof(DTE));
             vsIntegration.OnConnect(applicationObject);
             fortranCodeNav = new FortranCodeNavCore.FortranCodeNavCore(vsIntegration);            
